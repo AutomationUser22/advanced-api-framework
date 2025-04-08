@@ -29,10 +29,6 @@
         <hashTree/>
         
       </hashTree>
-      
-      <!-- Listeners -->
-      <ViewResultsTree guiclass="ViewResultsFullVisualizer" testclass="ViewResultsTree" testname="View Results Tree" enabled="true"/>
-      <SummaryReport guiclass="SummaryReport" testclass="SummaryReport" testname="Summary Report" enabled="true"/>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
