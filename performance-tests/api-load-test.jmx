@@ -22,8 +22,8 @@
         <!-- HTTP Request Sampler -->
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API Request" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments"/>
-          <stringProp name="HTTPSampler.domain">your-api-server.com</stringProp>
-          <stringProp name="HTTPSampler.path">/api/endpoint</stringProp>
+          <stringProp name="HTTPSampler.domain">http://wiremock:8080</stringProp>
+          <stringProp name="HTTPSampler.path">/posts/1</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
