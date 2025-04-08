@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.2">
+  <hashTree>
+    <!-- Test Plan -->
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="API Test Plan" enabled="true">
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments"/>
+    </TestPlan>
+    <hashTree>
+      
+      <!-- Thread Group: 100 Users -->
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController"/>
+        <stringProp name="ThreadGroup.num_threads">100</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <longProp name="ThreadGroup.start_time">1712510542000</longProp>
+        <longProp name="ThreadGroup.end_time">1712510542000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        
+        <!-- HTTP Request Sampler -->
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="API Request" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"/>
+          <stringProp name="HTTPSampler.domain">your-api-server.com</stringProp>
+          <stringProp name="HTTPSampler.path">/api/endpoint</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        
+      </hashTree>
+      
+      <!-- Listeners -->
+      <ViewResultsTree guiclass="ViewResultsFullVisualizer" testclass="ViewResultsTree" testname="View Results Tree" enabled="true"/>
+      <SummaryReport guiclass="SummaryReport" testclass="SummaryReport" testname="Summary Report" enabled="true"/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
