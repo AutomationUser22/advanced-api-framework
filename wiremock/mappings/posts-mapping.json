@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/posts/1"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": 1,
+      "title": "Mocked Title"
+    }
+  }
+}

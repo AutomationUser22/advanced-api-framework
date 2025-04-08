@@ -1,0 +1,15 @@
+version: '3'
+services:
+  wiremock:
+    image: wiremock/wiremock
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./wiremock/mappings:/home/wiremock/mappings  # Stub mappings
+
+  api-tests:
+    build: .
+    depends_on:
+      - wiremock
+    environment:
+      - BASE_URL=http://wiremock:8080  # Test against mock server
