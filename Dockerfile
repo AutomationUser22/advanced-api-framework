@@ -14,9 +14,6 @@ RUN wget -O /opt/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager.jar https://
 RUN java -cp /opt/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
 RUN java -jar /opt/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager.jar install jpgc-standard
 
-#Adding custom library to jmeter image
-RUN java -jar /opt/apache-jmeter-5.6.2/lib/ext/jmeter-plugins-manager.jar install jpgc-standard
-
 # Set working directory
 WORKDIR /app
 
